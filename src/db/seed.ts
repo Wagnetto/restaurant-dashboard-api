@@ -8,11 +8,11 @@ import {
   restaurants,
   users,
 } from './schema'
-import { faker } from '@faker-js/faker'
-import { db } from './connection'
+import {faker} from '@faker-js/faker'
+import {db} from './connection'
 import chalk from 'chalk'
-import { orderItems } from './schema/order-items'
-import { createId } from '@paralleldrive/cuid2'
+import {orderItems} from './schema/order-items'
+import {createId} from '@paralleldrive/cuid2'
 
 /**
  * Reset database
@@ -55,7 +55,7 @@ const [manager] = await db
   .insert(users)
   .values({
     name: faker.person.fullName(),
-    email: 'diego.schell.f@gmail.com',
+    email: 'manager@restaurant.com',
     role: 'manager',
   })
   .returning()
